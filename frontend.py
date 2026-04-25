@@ -50,7 +50,7 @@
 #         st.error(f"API Error: {e}")
 
 # st.divider()
-# st.caption("Backend running on FastAPI with a simple credit scoring model and fraud detection logic")
+# st.caption("Backend running on FastAPI with a simple credit scoring model and fraud detection logic.")
 
 import streamlit as st
 import requests
