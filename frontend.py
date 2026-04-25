@@ -264,4 +264,4 @@ else:  # USSD Mode
         st.rerun()
 
 st.divider()
-st.caption("💰 Powered by Airtime Lending API | *303# MTN Style")
+st.caption("💰 Powered by Airtime Lending API")
