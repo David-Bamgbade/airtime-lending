@@ -91,7 +91,7 @@ if mode == "🌐 Web Form":
     
     defaults = st.selectbox("Past Defaults", [0, 1, 2])
     
-    if st.button("🔍 Check Loan Eligibility", type="primary"):
+    if st.button("🔍 Check Loan Eligibility"):
         payload = {
             "msisdn": msisdn,
             "requested_amount": requested_amount,
