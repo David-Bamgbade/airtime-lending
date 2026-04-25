@@ -7,7 +7,7 @@ st.title("📱 Airtime Lending Simulator")
 st.markdown("Credit scoring + Fraud detection running on Kubernetes")
 
 # API URL (your backend)
-API_URL = "http://localhost:8000"
+API_URL = "https://airtime-lending.onrender.com"
 
 st.divider()
 
