@@ -55,7 +55,22 @@
 import streamlit as st
 import requests
 
-st.set_page_config(page_title="Airtime Lending + USSD", layout="centered")
+st.set_page_config(page_title="Airtime Lending + USSD", layout="centered", initial_sidebar_state="collapsed")
+st.markdown(
+    """
+    <style>
+        .main > div {
+            padding: 0rem 1rem;
+        }
+        @media (max-width: 768px) {
+            .stButton button {
+                width: 100%;
+            }
+        }
+    </style>
+    """, unsafe_allow_html=True
+)
+
 
 API_URL = "https://airtime-lending.onrender.com"
 
