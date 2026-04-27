@@ -37,8 +37,6 @@ class SimpleCreditScorer:
         return {'credit_score': round(score, 1), 'max_loan': max_loan}
 
 app = FastAPI()
-credit_model = SimpleCreditScorer()
-fraud_detector = FraudDetector()
 
 app.add_middleware(
     CORSMiddleware,
@@ -47,6 +45,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+credit_model = SimpleCreditScorer()
+fraud_detector = FraudDetector()
 
 class LoanRequest(BaseModel):
     msisdn: str
