@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from fraud_detector import FraudDetector
+from fastapi.middleware.cors import CORSMiddleware
 
 class SimpleCreditScorer:
     def __init__(self):
@@ -38,6 +39,14 @@ class SimpleCreditScorer:
 app = FastAPI()
 credit_model = SimpleCreditScorer()
 fraud_detector = FraudDetector()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 class LoanRequest(BaseModel):
     msisdn: str
